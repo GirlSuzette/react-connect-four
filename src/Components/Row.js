@@ -1,4 +1,3 @@
-// Row component
 import React, { Component } from "react";
 import Cell from './Cell'
 
