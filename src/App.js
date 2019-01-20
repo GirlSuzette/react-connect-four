@@ -12,7 +12,8 @@ export default class App extends Component {
       currentPlayer: null,
       board: [],
       gameOver: false,
-      message: ''
+      message: '',
+      show: false
     };
 
     this.play = this.play.bind(this);
@@ -143,6 +144,12 @@ export default class App extends Component {
     this.initBoard();
   }
 
+  handleClickShow = () => {
+    this.setState({
+      show: !this.state.show,
+      loading: false
+    })
+  }
 
   render() {
     return (
@@ -150,7 +157,9 @@ export default class App extends Component {
         <section className="centerbn">
           <div className="button" onClick={() => { this.initBoard() }}>New Game</div>
         </section>
-        <p className="message">{this.state.message}</p>
+        <div className="Cont">
+          <p className="Cont-button otro message">{this.state.message}</p>
+        </div>
         <table>
           <thead>
           </thead>
